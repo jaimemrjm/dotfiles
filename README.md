@@ -22,16 +22,22 @@ useful.
 
 ## Install
 
-Clone this repository in a location such as `~/.dotfiles`. Then, enter
+### Requirements
+
+- UNIX-like OS or Cygwin for Windows
+- stow
+
+### Setup
+
+Clone this repository in a location such as `~/.dotfiles` or clone whenever
+you want to and make a symbolic link there. Then, enter
 the just cloned repository and start stowing the packages that you want
 or you can stow all of the packages with stowall.
 
-    git clone https://github.com/gorkarevilla/dotfiles.git ~/.dotfiles
+    git clone https://github.com/jaimemrjm/dotfiles.git ~/.dotfiles
     cd ~/.dotfiles
     stow zsh
-    stow openbox
-    stow tmux
-    stowall
+    #stowall
 
 Note that `stow zsh` works because there is a directory named `zsh` at
 `~/.dotfiles` and because the parent directory for `~/.dotfiles/` is 
@@ -39,18 +45,12 @@ $HOME. If you are cloning this repository into a different location you will
 need to change the target directory or you will get these dotfiles linked
 at wrong locations.
 
-You also need a nerd font for the zsh. For example this one: [Meslo LG M Nerd Font](https://github.com/ryanoasis/nerd-fonts/blob/master/patched-fonts/Meslo/M/Regular/complete/Meslo%20LG%20M%20Regular%20Nerd%20Font%20Complete.ttf)
+You also need a nerd font for the zsh. I recommend [Meslo LG from Power10k project](https://github.com/romkatv/powerlevel10k#manual-font-installation)
 
 ## Packages
 
 Most of the packages have the name of the application they are used by, such
-as **atom**, **bash** or **zsh** and they don't need further explanation.
-However, there are a few special packages:
-
-* **osx**: special settings for MacOS X.
-* **powershell**: special settings for Windows (PowerShell).
-* **ubuntu**: special settings for Ubuntu based systems.
-* **windows**: special settings for Windows (Cygwin / MSYS-NT).
+as **bash** or **zsh** and they don't need further explanation.
 
 ## Disclaimer
 

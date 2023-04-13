@@ -17,7 +17,7 @@ if [ -n "$BASH_VERSION" ]; then
 fi
 
 # set PATH so it includes user's private bin if it exists
-if [ -d "$HOME/bin" ] ; then
+if [ -d "$HOME/bin" ]; then
     PATH="$HOME/bin:$PATH"
 fi
 
@@ -26,8 +26,13 @@ if [ -f "$HOME/.vault.txt" ]; then
     . "$HOME/.vault.txt"
 fi
 
-# add python binaries to the path
-PATH=$PATH:~/.local/bin
-
+# add python and cargo binaries to the path
+if [ -d ~/.local/bin ]; then
+    PATH=$PATH:~/.local/bin
+fi
 [ -d ~/.cargo.bin ] && export PATH="$HOME/.cargo/bin:$PATH"
 
+# Language environment
+export LANG=es_ES.UTF-8
+# Editor by default
+export EDITOR="vim"
